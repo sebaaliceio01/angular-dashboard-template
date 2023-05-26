@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="sidebar-header">
+    <img src="./assets/logotipe/MonnetNav.png" alt="" />
+  </div>
+  <nav [ngClass]="{ collapsed: collapsed }">
+    <ng-container>
+      <mat-accordion class="example-headers-align" multi (click)="onReturn()">
+        <mat-expansion-panel
+          class="mat-elevation-z0"
+          [expanded]="true"
+          hideToggle
+          #panel="matExpansionPanel"
+          *ngFor="let route of routes"
+        >
+          <mat-expansion-panel-header *ngIf="commonArray(route.roles, roles)">
+            <mat-panel-title>
+              <!-- <img [src]="route.iconTitle" alt="" /> -->
+              <mat-icon [ngClass]="'isActive'">{{ route.iconTitle }}</mat-icon>
+              <span *ngIf="!collapsed">{{ route.module }}</span>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="routes" *ngFor="let action of route.actions">
+            <button
+              mat-flat-button
+              [color]="'primary'"
+              [routerLink]="[action.route]"
+              class="module-option"
+              [ngClass]="urlActive === action.route ? 'isActive' : ''"
+              *ngIf="commonArray(action.roles, roles)"
+            >
+              <span *ngIf="!collapsed">{{ action.label }}</span>
+            </button>
+          </div>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </ng-container>
+  </nav>
+</div>

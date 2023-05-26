@@ -1,0 +1,11 @@
+@import "_mixin";
+
+.mdc-button {
+    @include font-family;
+
+    font-size: 12px !important;
+}
+
+.module-option.mdc-button {
+    justify-content: start !important;
+}

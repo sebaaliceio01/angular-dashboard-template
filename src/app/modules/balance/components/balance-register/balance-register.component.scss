@@ -1,0 +1,10 @@
+@import "../../../../../assets/styles/mixin";
+
+.filters {
+    @include filters
+}
+
+.filter-actions {
+    display: flex;
+    gap: 10px;
+}

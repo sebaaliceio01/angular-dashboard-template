@@ -1,0 +1,44 @@
+<form [formGroup]="form">
+  <div class="datepicker-select">
+    <ui-input-label [label]="startDateLabel"></ui-input-label>
+    <mat-form-field
+      class="datepicker"
+      [ngClass]="max_width ? 'custom-width select' : 'full-width'"
+    >
+      <!-- <mat-label>{{ startDateLabel }}</mat-label> -->
+      <input
+        matInput
+        class="custom-input-heigth"
+        [formControl]="startDate"
+        [placeholder]="startDayPlaceholder"
+        [matDatepicker]="sdate"
+        (dateInput)="onStartDateChange($event)"
+      />
+      <mat-datepicker-toggle matSuffix [for]="sdate"> </mat-datepicker-toggle>
+      <mat-datepicker #sdate></mat-datepicker>
+    </mat-form-field>
+  </div>
+  <div class="datepicker-select">
+    <ui-input-label [label]="endDateLabel"></ui-input-label>
+    <mat-form-field
+      *ngIf="isRange"
+      class="datepicker"
+      [ngClass]="max_width ? 'custom-width select' : 'full-width'"
+    >
+      <!-- <mat-label>{{ endDateLabel }}</mat-label> -->
+      <input
+        matInput
+        class="custom-input-heigth"
+        [formControl]="endDate"
+        [placeholder]="endDayPlaceHolder"
+        [matDatepicker]="edate"
+        (dateInput)="onEndDateChange($event)"
+      />
+      <mat-datepicker-toggle matSuffix [for]="edate"></mat-datepicker-toggle>
+      <mat-datepicker #edate></mat-datepicker>
+    </mat-form-field>
+  </div>
+</form>
+
+<!-- placeholder="{{ startDateLabel | translate }}" -->
+<!-- placeholder="{{ endDateLabel | translate }}" -->

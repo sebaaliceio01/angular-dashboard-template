@@ -1,0 +1,29 @@
+<app-page-template title="Registro de balance" [filters]="true">
+  <div slot="filters" class="filters">
+    <ui-merchant-select
+      [value]="merchant"
+      [max_width]="true"
+    ></ui-merchant-select>
+    <ui-country-select [value]="country" [max_width]="true"></ui-country-select>
+    <ui-datepicker
+      [isRange]="true"
+      [max_width]="true"
+      class="g"
+      startDateLabel="Start day"
+      endDateLabel="End day"
+      [startDayPlaceholder]="'Start day'"
+      [endDayPlaceHolder]="'End day'"
+      [startDate]="startDay"
+      [endDate]="endDay"
+    ></ui-datepicker>
+  </div>
+  <div slot="filter_actions" class="filter-actions">
+    <ui-button icon="search" [isLoading]="isLoading" [disabled]="isLoading" (onClick)="getBalanceRegister()">Search</ui-button>
+    <ui-button icon="add" (onClick)="onClick()"
+      >Add Movement</ui-button
+    >
+  </div>
+  <div slot="content">
+    <app-base-table [baseTable]="baseTableOptions" [showActions]="showActions"></app-base-table>
+  </div>
+</app-page-template>

@@ -1,0 +1,24 @@
+@import "../../../../../assets/styles/material/input";
+
+form {
+    display: flex;
+    gap: 15px;
+
+    .datepicker-select {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.title {
+    color: #7B8086;
+    font-size: 12px;
+}
+
+.custom-width {
+    @include max-width-mat-field
+}
+
+mat-form-field.full-width {
+    width: 100% !important;
+}

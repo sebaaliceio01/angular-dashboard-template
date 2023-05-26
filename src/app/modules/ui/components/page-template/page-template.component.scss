@@ -1,0 +1,80 @@
+@import "_mixin";
+@import "_palette";
+
+.dashboard-template {
+
+    .dashboard-title {
+        @include font-family
+    }
+
+    .title {
+        font-size: 22px;
+        font-weight: 500;
+        padding-bottom: 5px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        color: $primary-palette-700 !important;
+
+        .icon {
+            margin-top: 8px;
+            color: $primary-palette-700 !important;
+
+            mat-icon {
+                padding: 5px;
+                border-radius: 10px;
+                background-color: $primary-palette-700 !important;
+                color: white;
+            }
+        }
+    }
+
+    .filters {
+        mat-card {
+            border-radius: 0% !important;
+            background-color: #F8F8F8;
+            box-shadow: none;
+
+            .card-container {
+                // padding: 0 25px;
+                display: flex;
+                flex-direction: column;
+
+                .actions {
+                    display: flex;
+                    justify-content: flex-end;
+                }
+            }
+
+            mat-card-title {
+                border-top-right-radius: 10px;
+                border-top-left-radius: 10px;
+            }
+
+            mat-card-content {
+                color: #FFFFFF;
+                background: url('/assets/images/Banner Titles2.png') no-repeat;
+                display: flex;
+                flex-direction: column;
+                padding-top: 15px;
+            }
+
+            mat-card-actions {
+                display: flex;
+                justify-content: flex-end;
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    .content {
+        padding: 0 25px;
+        padding-bottom: 10px;
+    }
+}

@@ -1,0 +1,13 @@
+<h1 mat-dialog-title>{{ isLoading ? 'Your report is in progress' : 'Your report is finished' }}</h1>
+<mat-dialog-content *ngIf="isLoading">
+    <ui-custom-spinner></ui-custom-spinner>
+</mat-dialog-content>
+<mat-dialog-actions class="actions" align="end" *ngIf="!isLoading">
+    <ui-button
+      [full_width]="true"
+      icon="check"
+      [bg_white]="true"
+      (click)="dialogRef.close(true)"
+      >Close</ui-button
+    >
+</mat-dialog-actions>

@@ -1,0 +1,6 @@
+<ui-icon-button [user_account]="true" [matMenuTriggerFor]="menu">{{
+  username
+}}</ui-icon-button>
+<mat-menu #menu="matMenu">
+  <ui-button [mat_menu]="true" [icon]="'logout'" (onClick)="logout()">{{ "Logout" }} </ui-button>
+</mat-menu>

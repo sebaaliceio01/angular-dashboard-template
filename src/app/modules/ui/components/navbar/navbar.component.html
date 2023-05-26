@@ -1,0 +1,11 @@
+<nav>
+  <span class="icon">
+    <mat-icon [ngClass]="'isActive'">{{ componentTitleOptions.icon }}</mat-icon>
+  </span>
+  <div
+    class="flex"
+    *ngFor="let steps of componentTitleOptions.steps"
+  >
+    <span>{{ steps }}</span>
+  </div>
+</nav>

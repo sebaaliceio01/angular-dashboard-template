@@ -1,0 +1,53 @@
+mat-dialog-content {
+    display: grid;
+    gap: 15px;
+    grid-template-areas:
+        "a b"
+        "c d"
+        "e f"
+        "g g"
+        "h h";
+
+    .a {
+        grid-area: a;
+    }
+
+    .b {
+        grid-area: b;
+    }
+
+    .c {
+        grid-area: c;
+    }
+    
+    .d {
+        grid-area: d;
+    }
+    
+    .e {
+        grid-area: e;
+    }
+
+    .f {
+        grid-area: f;
+    }
+
+    .g {
+        grid-area: g;
+    }
+    
+    .h {
+        grid-area: h;
+    }
+}
+
+.actions {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    ui-button {
+        width: 100%;
+    }
+}

@@ -1,0 +1,90 @@
+@import "_mixin";
+
+@mixin max-width-mat-field {
+    max-width: 156px !important;
+}
+
+.ng-tns-c33-2 {
+    @include font-family;
+}
+
+.mdc-text-field--filled {
+    /* Rectangle 8 */
+    background: #FFFFFF !important;
+    border: 1px solid #F1F1F3;
+    border-radius: 10px !important;
+    color: #5E5B57 !important;
+    font-weight: 500;
+    padding-bottom: 5px !important;
+}
+
+.mat-form-field-underline {
+    display: none !important;
+}
+
+.mdc-line-ripple {
+    border: none !important;
+}
+
+.mdc-line-ripple::before,
+.mdc-line-ripple::after {
+    display: none !important;
+}
+
+.mat-mdc-form-field-infix {
+    min-height: 10px !important;
+    // border-bottom: 2px solid #5E5B57;
+    padding: 5px !important;
+}
+
+// .mat-mdc-select-value {
+//     margin-top: 5px !important;
+// }
+
+.mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__input {
+    color: #5E5B57;
+    font-size: 14px !important;
+}
+
+.mat-form-field-appearance-fill .mat-mdc-select-arrow-wrapper {
+    transform: translateY(0px) !important;
+}
+
+.mat-mdc-select-value {
+    @include font-family;
+
+    color: #5E5B57;
+    font-size: 14px !important;
+}
+
+.datepicker {
+    .mat-mdc-form-field-infix {
+        border-bottom: none;
+    }
+}
+
+.select {
+    .mat-mdc-form-field-infix {
+        border-bottom: none;
+    }
+}
+
+.mdc-list-item__primary-text {
+    @include font-family;
+}
+
+.mat-mdc-form-field-bottom-align {
+    display: none !important;
+}
+
+.mat-mdc-text-field-wrapper.mdc-text-field {
+    height: 34px !important;
+    // height: 44px !important;
+}
+
+.text-area {
+    .mat-mdc-text-field-wrapper {
+        height: 55px !important;
+        // height: 44px !important;
+    }
+}

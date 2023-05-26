@@ -1,0 +1,13 @@
+<div [ngClass]="spinnerButton">
+  <div class="logo-icon">
+    <ng-content #image></ng-content>
+  </div>
+  <mat-progress-spinner
+    [strokeWidth]="strokeWidth"
+    [diameter]="diameter"
+    [color]="color"
+    [mode]="mode"
+    [value]="value"
+  >
+  </mat-progress-spinner>
+</div>

@@ -1,0 +1,49 @@
+<div class="container">
+  <mat-card [appearance]="'outlined'">
+    <mat-card-content>
+      <div class="element">
+        <span class="title">Country</span>
+        <div class="description">{{ data.country }}</div>
+      </div>
+      <div class="separator">
+        <div class="border"></div>
+      </div>
+      <div class="element">
+        <span class="title">Total Balance</span>
+        <div class="description">
+          {{
+            data.totalBalanceAmount.amount +
+              " " +
+              data.totalBalanceAmount.currency
+          }}
+        </div>
+      </div>
+      <div class="separator">
+        <div class="border"></div>
+      </div>
+      <div class="element">
+        <span class="title">Available Balance</span>
+        <div class="description">
+          {{
+            data.totalBalanceAmount.amount +
+              " " +
+              data.totalBalanceAmount.currency
+          }}
+        </div>
+      </div>
+      <div class="separator">
+        <div class="border"></div>
+      </div>
+      <div class="element">
+        <span class="title">In Progress Balance</span>
+        <div class="description">
+          {{
+            data.totalBalanceAmount.amount +
+              " " +
+              data.totalBalanceAmount.currency
+          }}
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

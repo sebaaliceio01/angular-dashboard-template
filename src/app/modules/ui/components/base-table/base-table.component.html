@@ -1,0 +1,81 @@
+<div class="base-table">
+  <mat-card>
+    <mat-card-title>
+      <div class="actions">
+        <ng-content #actions></ng-content>
+      </div>
+    </mat-card-title>
+    <mat-card-content>
+      <div class="table-responsive">
+        <table
+          mat-table
+          [dataSource]="baseTable.dataSource"
+          class="table-responsive"
+        >
+          <ng-container
+            *ngFor="let c of baseTable.columns"
+            [matColumnDef]="c.caption"
+          >
+            <ng-container *ngIf="c.caption === 'select'">
+              <th mat-header-cell *matHeaderCellDef>
+                <span class="checkbox">
+                  <mat-checkbox
+                    (change)="$event ? toggleAllRows() : null"
+                    [checked]="selection.hasValue() && isAllSelected()"
+                    [indeterminate]="selection.hasValue() && !isAllSelected()"
+                    [aria-label]="checkboxLabel()"
+                  >
+                  </mat-checkbox>
+                </span>
+              </th>
+              <td mat-cell *matCellDef="let element">
+                <span class="checkbox">
+                  <mat-checkbox
+                    (change)="$event ? selection.toggle(element) : null"
+                    [checked]="selection.isSelected(element)"
+                    [aria-label]="checkboxLabel(element)"
+                  >
+                  </mat-checkbox>
+                </span>
+              </td>
+            </ng-container>
+
+            <ng-container *ngIf="c.caption != 'select'">
+              <th mat-header-cell *matHeaderCellDef>
+                <!-- {{ c.caption | translate }} -->
+                {{ c.caption }}
+              </th>
+              <td mat-cell *matCellDef="let element">
+                <!-- {{ element[c.field] | translate }} -->
+                {{
+                  c.field.parseElement
+                    ? c.field.parseElement(element[c.field.key])
+                    : element[c.field.key]
+                }}
+              </td>
+            </ng-container>
+          </ng-container>
+
+          <ng-container matColumnDef="actions" *ngIf="showActions">
+            <th mat-header-cell *matHeaderCellDef>Actions</th>
+            <td mat-cell *matCellDef="let elemento">
+              <ui-menu [actions]="parseActions(elemento)"></ui-menu>
+            </td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+        </table>
+      </div>
+    </mat-card-content>
+    <mat-paginator
+      *ngIf="baseTable.paginateOptions"
+      [length]="baseTable.paginateOptions.totalCount"
+      [pageSize]="baseTable.paginateOptions.pageSize"
+      [pageSizeOptions]="baseTable.paginateOptions.pageSizeOptions || [10]"
+      (page)="onPageChangeEvent($event)"
+      showFirstLastButtons
+    >
+    </mat-paginator>
+  </mat-card>
+</div>

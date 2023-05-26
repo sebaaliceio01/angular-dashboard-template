@@ -1,0 +1,35 @@
+<app-page-template
+  title="Consulta de balance"
+  [filters]="true"
+  [actions]="isLoading"
+>
+  <div slot="filters">
+    <ui-form-group [form]="form">
+      <div class="filters">
+        <ui-merchant-select
+          [value]="merchant"
+          [required]="true"
+          [max_width]="true"
+          [multiple]="true"
+          [disabled]="true"
+          (onChangeEvent)="onMerchantChange()"
+        ></ui-merchant-select>
+        <ui-currency-select
+          [value]="currency"
+          [max_width]="true"
+          [disabled]="isLoading"
+          (onChangeEvent)="onMerchantChange()"
+        ></ui-currency-select>
+      </div>
+    </ui-form-group>
+  </div>
+  <div slot="filter_actions">
+    <ui-spinner [strokeWidth]="2" *ngIf="isLoading" diameter="20" color="primary"></ui-spinner>
+  </div>
+  <div slot="content" class="content">
+    <ui-balance-consultation-widget
+      *ngFor="let balance of balanceWidgets"
+      [data]="balance"
+    ></ui-balance-consultation-widget>
+  </div>
+</app-page-template>

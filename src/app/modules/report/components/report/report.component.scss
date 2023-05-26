@@ -1,0 +1,14 @@
+@import "_mixin";
+@import "_breakpoints";
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.filter-actions {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}

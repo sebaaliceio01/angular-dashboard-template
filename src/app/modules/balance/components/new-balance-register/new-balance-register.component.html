@@ -1,0 +1,75 @@
+<h2 mat-dialog-title>New Record</h2>
+<mat-dialog-content>
+  <ui-merchant-select
+    uiInputLabelColor
+    class="a"
+    [required]="true"
+    [allOption]="true"
+    [value]="merchant"
+  ></ui-merchant-select>
+  <ui-country-select
+    class="b"
+    [required]="true"
+    [allOption]="true"
+    [value]="country"
+  ></ui-country-select>
+  <ui-currency-select
+    class="c"
+    [required]="true"
+    [allOption]="true"
+    [value]="currency"
+  ></ui-currency-select>
+  <ui-input-field
+    class="d"
+    type="number"
+    label="Amount"
+    [value]="amount"
+    [required]="true"
+  ></ui-input-field>
+  <ui-movement-type-select
+    class="e"
+    [required]="true"
+    [value]="movementType"
+  ></ui-movement-type-select>
+  <ui-description-type-select
+    class="f"
+    [required]="true"
+    [value]="descriptionType"
+  ></ui-description-type-select>
+  <ui-datepicker
+    [isRange]="true"
+    class="g"
+    startDateLabel="Start day"
+    endDateLabel="End day"
+    [startDate]="startDate"
+    [endDate]="endDate"
+    [endDayPlaceHolder]="'End day'"
+  ></ui-datepicker>
+  <ui-input-field
+    [value]="bankOpCode"
+    class="h"
+    type="number"
+    label="Insert Bank Op. Code (Optional)"
+    [textArea]="true"
+  ></ui-input-field>
+</mat-dialog-content>
+<mat-dialog-actions class="actions" align="end">
+  <div>
+    <ui-button
+      [full_width]="true"
+      icon="check"
+      [bg_white]="true"
+      (onClick)="onClick()"
+      >Confirm</ui-button
+    >
+  </div>
+  <div>
+    <ui-button
+      [full_width]="true"
+      icon="cancel"
+      [bg_white]="true"
+      (click)="dialogRef.close(false)"
+      >Cancel</ui-button
+    >
+  </div>
+</mat-dialog-actions>

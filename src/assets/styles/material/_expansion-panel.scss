@@ -1,0 +1,42 @@
+@import "_mixin";
+@import "_palette";
+
+.mat-expansion-panel-body {
+    padding: 0 !important;
+    padding-left: 65px !important;
+    background-color: $primary-palette-A700 !important;
+    color: white !important;
+}
+
+.mat-expansion-panel-spacing {
+    margin: 0 !important;
+}
+
+.mat-expansion-panel-header-title {
+    @include font-family;
+}
+
+.collapsed {
+    .mat-expansion-panel-spacing {
+        margin: 0 !important;
+    }
+
+    .mat-expansion-panel-header {
+        padding: 0 !important;
+
+
+        .mat-expansion-panel-header-title {
+            @include font-family;
+            display: flex;
+            justify-content: center;
+            padding: 0 !important;
+            margin: 0 !important;
+
+            img {
+                width: 30% !important;
+                margin-left: 10px !important;
+            }
+        }
+    }
+
+}

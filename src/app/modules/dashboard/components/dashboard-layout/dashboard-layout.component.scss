@@ -1,0 +1,73 @@
+@import "breakpoints";
+@import "mixin";
+@import "_palette";
+
+:host {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+
+    .mat-sidenav-container {
+        flex: 1;
+        display: flex;
+        max-width: 100%;
+        overflow-y: scroll;
+        height: 100vh;
+
+        .mat-sidenav {
+
+            background-color: $primary-palette-A700 !important;
+            width: 300px;
+            transition: all 80ms ease-in;
+
+            @include gtesm {
+                position: relative;
+                transform: none !important;
+                visibility: visible !important;
+            }
+        }
+
+        .mat-sidenav-content {
+            flex: 1;
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+            background-color: #F8F8F8;
+            height: 100vh;
+            overflow-y: scroll;
+        }
+
+        &.collapsed {
+            .mat-sidenav {
+                width: 0;
+                padding: 0;
+            }
+
+            @include gtesm {
+                .mat-sidenav {
+                    width: 80px;
+                }
+            }
+        }
+    }
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+app-dashboard-sidebar {
+    position: relative;
+}
+
+.open-sidebar {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 93.2%;
+    left: 75%;
+    z-index: 9999;
+
+    ui-icon-button {
+        margin-bottom: 3px;
+    }
+}

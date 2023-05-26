@@ -1,0 +1,9 @@
+@mixin filters {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+@mixin font-family {
+    font-family: Inter, "Helvetica Neue", sans-serif !important;
+}

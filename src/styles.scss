@@ -1,0 +1,15 @@
+@import "./assets/styles/main";
+@import '_palette';
+@import "_mixin";
+
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    @include font-family;
+    margin: 0;
+}

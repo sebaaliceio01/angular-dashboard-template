@@ -1,0 +1,30 @@
+<ui-input-label [required]="required" [label]="label"></ui-input-label>
+<mat-form-field
+  appearance="fill"
+  [ngClass]="max_width ? 'custom-width select' : 'full-width'"
+>
+  <!-- <mat-label>{{ label | translate }}</mat-label> -->
+  <!-- <mat-label>{{ label }}</mat-label> -->
+  <input
+    [placeholder]="'Write here...'"
+    matInput
+    *ngIf="!textArea"
+    [defaultValue]="default_value"
+    [formControl]="value"
+    [type]="type"
+    (input)="onChange($event)"
+    [required]="required"
+  />
+  <span class="text-area">
+    <textarea
+      *ngIf="textArea"
+      [placeholder]="'Write your comments here...'"
+      matInput
+      [defaultValue]="default_value"
+      [formControl]="value"
+      [type]="type"
+      (input)="onChange($event)"
+      [required]="required"
+    ></textarea>
+  </span>
+</mat-form-field>

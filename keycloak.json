@@ -1,0 +1,11 @@
+{
+    "realm": "frontend",
+    "auth-server-url": "http://localhost:8080/",
+    "ssl-required": "external",
+    "resource": "angular1",
+    "credentials": {
+      "secret": "Avagp53sonhZGYMCXn1NIeRZo7YzMRsn"
+    },
+    "confidential-port": 0,
+    "redirectUri": "http://localhost:4200/app/dashboard/report"
+  }

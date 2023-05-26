@@ -1,0 +1,19 @@
+@import "_main";
+
+:host {
+    display: flex;
+    flex-direction: column;
+}
+
+.custom-width {
+    @include max-width-mat-field
+}
+
+.title {
+    color: #7B8086;
+    font-size: 12px;
+}
+
+mat-form-field.full-width {
+    width: 100% !important;
+}

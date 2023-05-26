@@ -1,0 +1,19 @@
+<ui-input-label [required]="required" [label]="label"></ui-input-label>
+<mat-form-field
+  class="select"
+  [ngClass]="max_width ? 'custom-width select' : 'full-width'"
+>
+  <mat-select
+    [placeholder]="'Choose an option'"
+    class="custom-input-heigth"
+    [ngClass]="getClass()"
+    [formControl]="value"
+    (selectionChange)="onChange($event)"
+    [required]="required"
+    [multiple]="multiple"
+  >
+    <span *ngFor="let options of valueOptions">
+      <mat-option [value]="options.value">{{ options.label }}</mat-option>
+    </span>
+  </mat-select>
+</mat-form-field>

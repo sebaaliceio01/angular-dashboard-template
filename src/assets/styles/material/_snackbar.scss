@@ -1,0 +1,31 @@
+@import "_mixin";
+
+.mat-mdc-snack-bar-label {
+    @include font-family;
+}
+
+.mat-snack-bar-container {
+
+    padding: 16px 24px;
+    border-radius: 6px;
+    color: white;
+
+    .mat-simple-snackbar {
+        .mat-simple-snackbar-action {
+            margin: 0;
+            color: white;
+        }
+    }
+
+    &.app-snack-error {
+        background-color: #a90a0a;
+    }
+
+    &.app-snack-success {
+        background-color: #2f9410;
+    }
+
+    &.app-snack-info {
+        background-color: #9c9dff;
+    }
+}

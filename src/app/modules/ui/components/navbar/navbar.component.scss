@@ -1,0 +1,29 @@
+@import "_palette";
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    padding: 0 15px;
+    background-color: $primary-palette-700 !important;
+    border-radius: 10px;
+    margin: 0 10px;
+    font-size: 12px;
+
+    .flex {
+        display: flex;
+        gap: 10px;
+    }
+
+    .icon {
+        font-size: 12px;
+
+        mat-icon {
+            color: white;
+            border-radius: 10px;
+            border: none !important;
+            margin-top: 5px;
+        }
+    }
+}

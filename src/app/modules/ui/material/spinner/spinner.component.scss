@@ -1,0 +1,14 @@
+:host {
+    display: block;
+    position: relative;
+}
+
+.logo-icon {
+    position: absolute;
+    top: calc(50% - 24px);
+    left: calc(50% - 24px);
+}
+
+.button-spinner {
+    display: none;
+}

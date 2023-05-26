@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="dashboard-template">
+    <div class="filters" *ngIf="filters">
+      <mat-card>
+        <div class="card-container">
+          <!-- <mat-card-title>
+            <div class="title">
+              <div class="icon">
+                <mat-icon>{{ icon }}</mat-icon>
+              </div>
+              <span class="dashboard-title">&nbsp;{{ title }} </span>
+            </div>
+          </mat-card-title> -->
+          <mat-card-content>
+            <ng-content select="[slot=filters]"></ng-content>
+            <div class="actions">
+              <ng-content #filter_actions></ng-content>
+            </div>
+          </mat-card-content>
+        </div>
+        <!-- <mat-card-actions *ngIf="actions">
+          <ng-content #filter_actions></ng-content>
+        </mat-card-actions> -->
+      </mat-card>
+    </div>
+  </div>
+  <div class="content">
+    <ng-content select="[slot=content]"></ng-content>
+  </div>
+</div>

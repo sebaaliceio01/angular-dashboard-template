@@ -1,0 +1,17 @@
+.datepicker {
+    .mat-mdc-form-field-icon-suffix {
+        .mdc-icon-button {
+            padding: 0 !important;
+            padding-bottom: 8px !important;
+        }
+    }
+
+    .mat-mdc-icon-button {
+        --mat-mdc-button-ripple-color: none !important;
+        --mat-mdc-button-persistent-ripple-color: "none" !important;
+    }
+
+    .mat-mdc-text-field-wrapper {
+        align-items: flex-start;
+    }
+}

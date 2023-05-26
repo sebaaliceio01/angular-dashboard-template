@@ -1,0 +1,28 @@
+<div class="container-mov">
+  <mat-sidenav-container
+    [hasBackdrop]="false"
+    [ngClass]="{ collapsed: collapsed }"
+  >
+    <mat-sidenav
+      mode="push"
+      #sidenav
+      [opened]="true"
+      [ngClass]="{ collapsed: collapsed }"
+    >
+      <div class="open-sidebar">
+        <ui-icon-button
+          [sidebar]="true"
+          icon="menu"
+          (onClick)="collapseSidebar(!collapse)"
+        ></ui-icon-button>
+      </div>
+      <app-dashboard-sidebar [collapsed]="collapsed"></app-dashboard-sidebar>
+    </mat-sidenav>
+    <mat-sidenav-content [ngClass]="{ collapsed: collapsed }">
+      <app-header></app-header>
+      <div class="router-container">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

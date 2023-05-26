@@ -1,0 +1,125 @@
+{
+    "data": [
+        {
+            "id": "1",
+            "mid": 123456,
+            "merchant": "Example Merchant 1",
+            "country": "United States",
+            "movement": "1",
+            "movementDate": "2023-05-18T13:27:14.801+00:00",
+            "currency": "USD",
+            "amount": 1000,
+            "bankOpCode": 123,
+            "description": "Settlements Payins"
+        },
+        {
+            "id": "2",
+            "mid": 123456,
+            "merchant": "Example Merchant 2",
+            "country": "United States",
+            "movement": "2",
+            "movementDate": "2023-05-18T13:27:14.802+00:00",
+            "currency": "USD",
+            "amount": 500,
+            "bankOpCode": 2323,
+            "description": "Fund"
+        },
+        {
+            "id": "3",
+            "mid": 123456,
+            "merchant": "Example Merchant 3",
+            "country": "United States",
+            "movement": "2",
+            "movementDate": "2023-05-18T13:27:14.802+00:00",
+            "currency": "USD",
+            "amount": 400,
+            "bankOpCode": 123,
+            "description": "Fund"
+        },
+        {
+            "id": "4",
+            "mid": 123456,
+            "merchant": "Example Merchant 4",
+            "country": "United States",
+            "movement": "1",
+            "movementDate": "2023-05-18T13:27:14.802+00:00",
+            "currency": "USD",
+            "amount": 1000,
+            "bankOpCode": 465745,
+            "description": "Billing Payouts"
+        },
+        {
+            "id": "4",
+            "mid": 123456,
+            "merchant": "Example Merchant 4",
+            "country": "United States",
+            "movement": "1",
+            "movementDate": "2023-05-18T13:27:14.802+00:00",
+            "currency": "USD",
+            "amount": 1000,
+            "bankOpCode": 15243,
+            "description": "Billing Payouts"
+        },
+        {
+            "id": "4",
+            "mid": 123456,
+            "merchant": "Example Merchant 4",
+            "country": "United States",
+            "movement": "1",
+            "movementDate": "2023-05-18T13:27:14.802+00:00",
+            "currency": "USD",
+            "amount": 1000,
+            "bankOpCode": 567,
+            "description": "Billing Payouts"
+        },
+        {
+            "id": "4",
+            "mid": 123456,
+            "merchant": "Example Merchant 4",
+            "country": "United States",
+            "movement": "1",
+            "movementDate": "2023-05-18T13:27:14.802+00:00",
+            "currency": "USD",
+            "amount": 1000,
+            "bankOpCode": 123,
+            "description": "Billing Payouts"
+        },
+        {
+            "id": "8",
+            "mid": 123456,
+            "merchant": "Example Merchant 4",
+            "country": "United States",
+            "movement": "1",
+            "movementDate": "2023-05-18T13:27:14.802+00:00",
+            "currency": "USD",
+            "amount": 1000,
+            "bankOpCode": 123,
+            "description": "Billing Payouts"
+        },
+        {
+            "id": "9",
+            "mid": 123456,
+            "merchant": "Example Merchant 4",
+            "country": "United States",
+            "movement": "1",
+            "movementDate": "2023-05-18T13:27:14.802+00:00",
+            "currency": "USD",
+            "amount": 1000,
+            "bankOpCode": 123,
+            "description": "Billing Payouts"
+        },
+        {
+            "id": "10",
+            "mid": 123456,
+            "merchant": "Example Merchant 4",
+            "country": "United States",
+            "movement": "1",
+            "movementDate": "2023-05-18T13:27:14.802+00:00",
+            "currency": "USD",
+            "amount": 1000,
+            "bankOpCode": 123,
+            "description": "Billing Payouts"
+        }
+    ],
+    "totalCount": 423
+}

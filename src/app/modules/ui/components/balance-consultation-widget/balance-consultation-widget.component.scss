@@ -1,0 +1,46 @@
+.container {
+    mat-card {
+        background-color: #f1f0f0;
+        padding: 10px;
+        box-shadow: none;
+        border-radius: 10px;
+
+        mat-card-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+
+            .element {
+                width: 100%;
+                text-align: start;
+
+                .title {
+                    font-size: 18px;
+                    color: #000000;
+                    font-weight: 500;
+                }
+
+                .description {
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 19px;
+                    text-transform: capitalize;
+                    color: #575A53;
+                    margin-top: 15px;
+                }
+            }
+
+            .separator {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+
+                .border {
+                    border: 1px solid #000000;
+                    height: 80px;
+                    text-align: center !important;
+                }
+            }
+        }
+    }
+}

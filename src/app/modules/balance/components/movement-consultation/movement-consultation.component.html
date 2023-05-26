@@ -1,0 +1,26 @@
+<app-page-template title="Consulta de movimientos" [filters]="true">
+  <div slot="filters" class="filters">
+    <ui-merchant-select [max_width]="true" [value]="merchant"></ui-merchant-select>
+    <ui-country-select [max_width]="true" [value]="country"></ui-country-select>
+    <ui-currency-select [max_width]="true" [value]="currency"></ui-currency-select>
+    <ui-datepicker
+      [isRange]="true"
+      [max_width]="true"
+      class="g"
+      startDateLabel="Start day"
+      endDateLabel="End day"
+      [startDayPlaceholder]="'Start day'"
+      [endDayPlaceHolder]="'End day'"
+      [startDate]="startDay"
+      [endDate]="endDay"
+    ></ui-datepicker>
+  </div>
+  <div slot="filter_actions">
+    <ui-button icon="search" (onClick)="getBalanceRegister()" [isLoading]="isLoading"
+      >Filter</ui-button
+    >
+  </div>
+  <div slot="content">
+    <app-base-table [baseTable]="baseTableOptions"></app-base-table>
+  </div>
+</app-page-template>

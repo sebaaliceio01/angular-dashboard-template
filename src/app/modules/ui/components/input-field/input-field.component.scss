@@ -1,0 +1,19 @@
+@import "_main";
+
+:host {
+    display: flex;
+    flex-direction: column;
+}
+
+.custom-width {
+    @include max-width-mat-field;
+}
+
+textarea {
+    width: 100%;
+    max-height: 150px;
+}
+
+mat-form-field.full-width {
+    width: 100% !important;
+}

@@ -1,0 +1,25 @@
+@import "_palette";
+
+.mat-menu {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    color: #7B8086 !important;
+    border-radius: 0 !important;
+    background-color: none !important;
+}
+
+.bg-white {
+    background-color: white !important;
+    color: $background-blue !important;
+    font-weight: 700 !important;
+}
+
+button {
+    border-radius: 20px !important;
+    padding: 0 20px;
+}
+
+.full-width {
+    width: 100% !important;
+}

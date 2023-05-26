@@ -1,0 +1,80 @@
+@import "_palette";
+
+.container {
+    .sidebar-header {
+        background-color: $primary-palette-700 !important;
+        padding: 25px;
+        font-size: 20px;
+        color: white;
+
+        img {
+            width: 45%;
+            height: 20px;
+        }
+    }
+
+    nav {
+        mat-accordion {
+            mat-expansion-panel {
+                border-radius: 0 !important;
+
+                mat-expansion-panel-header {
+                    // border-right: 3px solid #6359A7;
+                    background-color: $primary-palette-A700 !important;
+
+                    mat-panel-title {
+                        display: flex;
+                        align-items: center;
+                        gap: 25px;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 24px;
+
+                        img {
+                            width: 10%;
+                        }
+
+                        mat-icon {
+                            color: white;
+                            padding: 5px;
+                            border-radius: 10px;
+                            background-color: $primary-palette-700 !important;
+                            border: none !important;
+                        }
+
+                        span {
+                            color: white !important;
+                        }
+
+                    }
+                }
+            }
+
+            .routes {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+
+                .module-option {
+                    color: white;
+                    padding: 25px 0;
+                    padding-left: 15px;
+                    text-align: start;
+
+                    span {
+                        font-weight: 500;
+                        font-size: 12px;
+                        line-height: 17px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.isActive {
+    font-weight: 700;
+    border-right: 2px solid white;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}

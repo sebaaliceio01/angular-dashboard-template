@@ -1,0 +1,14 @@
+<h1 mat-dialog-title>{{ title }}</h1>
+<mat-dialog-content>{{ message }}</mat-dialog-content>
+<mat-dialog-actions class="actions" align="end">
+  <div>
+    <ui-button [full_width]="true" icon="check" [bg_white]="true" (click)="dialogRef.close(true)"
+      >Confirm</ui-button
+    >
+  </div>
+  <div>
+    <ui-button [full_width]="true" icon="cancel" [bg_white]="true" (click)="dialogRef.close(false)"
+      >Cancel</ui-button
+    >
+  </div>
+</mat-dialog-actions>

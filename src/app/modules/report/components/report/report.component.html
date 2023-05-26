@@ -1,0 +1,89 @@
+<app-page-template title="Report" icon="report" [filters]="true">
+  <div slot="filters" class="filters">
+    <ui-datepicker
+      startDateLabel="Start Day"
+      endDateLabel="End Day"
+      [isRange]="true"
+      [max_width]="true"
+      [startDate]="startDay"
+      [endDate]="endDay"
+    ></ui-datepicker>
+    <ui-input-field
+      type="number"
+      label="Payout ID"
+      [value]="payoutId"
+      [max_width]="true"
+    ></ui-input-field>
+    <ui-input-field
+      type="text"
+      label="Bank Account"
+      [value]="bankAccount"
+      [max_width]="true"
+    ></ui-input-field>
+    <ui-input-field
+      type="number"
+      label="Benef. Doc Number"
+      [value]="benefDocNumber"
+      [max_width]="true"
+    ></ui-input-field>
+    <ui-input-field
+      type="number"
+      label="Order ID"
+      [value]="orderId"
+      [max_width]="true"
+    ></ui-input-field>
+    <ui-merchant-select
+      [max_width]="true"
+      [value]="merchant"
+    ></ui-merchant-select>
+    <ui-input-select
+      label="Bank"
+      [valueOptions]="value"
+      [value]="bank"
+      [max_width]="true"
+    ></ui-input-select>
+    <ui-input-select
+      label="Stage"
+      [valueOptions]="value"
+      [value]="stage"
+      [max_width]="true"
+    ></ui-input-select>
+    <ui-input-select
+      label="Status"
+      [valueOptions]="value"
+      [value]="status"
+      [max_width]="true"
+    ></ui-input-select>
+  </div>
+  <div slot="filter_actions" class="filter-actions">
+    <ui-button
+      icon="restart_alt"
+      [color]="'accent'"
+      [isLoading]="isLoading"
+      [disabled]="isLoading"
+      (onClick)="resetForm()"
+      >Reset filters</ui-button
+    >
+    <ui-button
+      [color]="'accent'"
+      icon="share"
+      [isLoading]="isLoading"
+      [disabled]="isLoading"
+      (onClick)="openReportDialog()"
+      >Export</ui-button
+    >
+    <ui-button
+      icon="search"
+      [isLoading]="isLoading"
+      [disabled]="isLoading"
+      (onClick)="onSearch()"
+      >Filter</ui-button
+    >
+  </div>
+  <div slot="content">
+    <app-base-table
+      [baseTable]="baseTableOptions"
+      (onPageChange)="onPageChange($event)"
+    ></app-base-table>
+  </div>
+</app-page-template>

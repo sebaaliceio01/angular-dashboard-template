@@ -1,0 +1,15 @@
+<ui-icon-button
+  [menu_style]="true"
+  [icon]="icon"
+  [matMenuTriggerFor]="menu"
+></ui-icon-button>
+<mat-menu #menu="matMenu">
+  <ng-container *ngFor="let action of actions">
+    <ui-button
+      [mat_menu]="true"
+      [icon]="action.icon"
+      (onClick)="action.action(action.element)"
+      >{{ action.name }}</ui-button
+    >
+  </ng-container>
+</mat-menu>

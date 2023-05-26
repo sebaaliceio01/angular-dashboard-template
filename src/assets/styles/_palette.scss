@@ -4,7 +4,7 @@
 
  $background-blue: #3736d3;
 
- $monnet-primary-palette: (
+ $custom-palette: (
    50: #e8eaf6,
    100: #c5cae9,
    200: #9fa8da,
@@ -37,8 +37,8 @@
    )
  );
 
- $primary: mat.define-palette($monnet-primary-palette, A700);
- $secondary: mat.define-palette($monnet-primary-palette, 400);
+ $primary: mat.define-palette($custom-palette, A700);
+ $secondary: mat.define-palette($custom-palette, 400);
 
  $primary-palette-A700: mat.get-color-from-palette($primary, A700);
  $primary-palette-700: mat.get-color-from-palette($primary, 700);
@@ -47,6 +47,6 @@
  $secondary-400: mat.get-color-from-palette($secondary, 400);
  $secondary-300: mat.get-color-from-palette($secondary, 300);
 
- $monnet-theme: mat.define-light-theme((color: (primary: $primary, accent: $secondary, )));
+ $custom-theme: mat.define-light-theme((color: (primary: $primary, accent: $secondary, )));
 
- @include mat.all-component-themes($monnet-theme);
+ @include mat.all-component-themes($custom-theme);
